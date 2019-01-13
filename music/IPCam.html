@@ -1,0 +1,38 @@
+{% extends 'music/base.html' %}
+{% block title %}{{ album }}{% endblock %}
+
+{% block body %}
+<div class="albums-container container-fluid">
+
+        <!-- Albums -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>{{ user.username }}'s IP Cam Links</h3>
+            </div>
+           
+            <div class="col-sm-4 col-lg-2">
+                <div class="thumbnail">
+                    <a href="{% url 'music:IP_Cam' %}"></a>
+                    </a>
+                    <div class="caption">
+                        <h2>IP Cam</h2>
+                        <h4>Links</h4>
+                        <!-- View Details -->
+                        <a href="{% url 'music:IPCamdetail' %}" class="btn btn-primary btn-sm" role="button">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-lg"></div>
+
+            <div class="col-sm-12">
+                <br>
+                <a href="{% url 'music:IPCamdetail' %}">
+                    <button type="button" class="btn btn-success">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add IP Cam Link
+                    </button>
+                </a>
+            </div>
+           
+        </div>
+</div>   
+{% endblock %}
